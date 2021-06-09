@@ -10,19 +10,19 @@
       <q-card-section>
           
           <div class="text-h5">
-           Deaths: {{ records.states[0].state }}
+           Deaths: {{ records.states[0].death }}
           </div>
           <hr>
           <div class="text-h5">
-           Deaths: {{ records.states[0].state }}
+           Confirmed Cases: {{ records.states[0].confirmedCases }}
           </div>
           <hr>
           <div class="text-h5">
-           Deaths: {{ records.states[0].state }}
+           Cases on Admission: {{ records.states[0].casesOnAdmission }}
           </div>
           <hr>
           <div class="text-h5">
-           Deaths: {{ records.states[0].state }}
+           Discharged: {{ records.states[0].discharged }}
           </div>
           <hr>
           <q-img
