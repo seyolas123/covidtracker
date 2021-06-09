@@ -1,43 +1,32 @@
 <template>
   <q-page class="bg-white">
-   
-     <q-card style="margin-top: -42px;" v-for="(records) in states" :key="records.index" class="bg-grey-3 text-blue my-card">
-      <h4 class="relative-top q-mb-none">{{ records.states[0].state }}</h4>
-      <q-list>
-        <q-item>
-          <q-item-section avatar>
-            <q-icon color="primary" name="local_bar" />
-          </q-item-section>
+    <div v-for="(records) in states" :key="records.index">
+        <q-card class="col bg-brown-5 text-white ">
+      <q-card-section class="q-pb-none">
+        <div class="text-h6-lg">Samples Tested</div>
+      </q-card-section>
+      <q-card-section>
+          
+          <div class="text-h5">
+           {{ records.totalSamplesTested }}
+          
+           
+          </div>
+          <q-img
+            class="absolute-right vertical-middle" 
+            style="margin-top: -10px; color:white; height: 50px; max-width: 50px"
+            src="../assets/cvd_logo.png">
+          </q-img>
+        
+      </q-card-section>
 
-          <q-item-section>
-            <q-item-label>No. of Deaths</q-item-label>
-            <q-item-label>{{ records.states[0].death }}</q-item-label>
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable>
-          <q-item-section avatar>
-            <q-icon color="red" name="local_gas_station" />
-          </q-item-section>
-
-          <q-item-section>
-            <q-item-label>Gas Station</q-item-label>
-            <q-item-label caption>Fill your gas tank.</q-item-label>
-          </q-item-section>
-        </q-item>
-
-        <q-item clickable>
-          <q-item-section avatar>
-            <q-icon color="amber" name="local_movies" />
-          </q-item-section>
-
-          <q-item-section>
-            <q-item-label>Cinema XYZ</q-item-label>
-            <q-item-label caption>Watch a movie.</q-item-label>
-          </q-item-section>
-        </q-item>
-      </q-list>
+      <q-inner-loading v-if='loading'>
+        <q-spinner-gears size="50px" color="primary" />
+      </q-inner-loading>
     </q-card>
+    </div>
+   
+
   </q-page>
 </template>
 
@@ -49,6 +38,22 @@ export default {
   name: 'PageIndex',
   data() {
     return {
+      columns: [
+        {
+          name: 'desc',
+          required: true,
+          label: 'State',
+          align: 'left',
+          field: row => row.name,
+          format: val => `${val}`,
+          sortable: true
+        },
+        { deaths: 'calories', align: 'center', label: 'Deaths', field: 'calories', sortable: true },
+        { name: 'fat', label: 'Active Cases', field: 'fat', sortable: true },
+       
+      ],
+
+      
       slide: 'style',
       loading: true,
       states: [],
@@ -56,8 +61,8 @@ export default {
     }
   },
   mounted () {
-    this.loadData(),
-    this.incrementCounter()
+    this.loadData()
+    
   },
   methods: {
   incrementCounter() {
