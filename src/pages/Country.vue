@@ -10,10 +10,21 @@
       <q-card-section>
           
           <div class="text-h5">
-           {{ records.totalSamplesTested }}
-          
-           
+           Deaths: {{ records.states[0].state }}
           </div>
+          <hr>
+          <div class="text-h5">
+           Deaths: {{ records.states[0].state }}
+          </div>
+          <hr>
+          <div class="text-h5">
+           Deaths: {{ records.states[0].state }}
+          </div>
+          <hr>
+          <div class="text-h5">
+           Deaths: {{ records.states[0].state }}
+          </div>
+          <hr>
           <q-img
             class="absolute-right vertical-middle" 
             style="margin-top: -10px; color:white; height: 50px; max-width: 50px"
