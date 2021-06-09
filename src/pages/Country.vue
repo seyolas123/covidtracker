@@ -3,7 +3,9 @@
     <div v-for="(records) in states" :key="records.index">
         <q-card class="col bg-brown-5 text-white ">
       <q-card-section class="q-pb-none">
-        <div class="text-h6-lg">Samples Tested</div>
+        <div class="text-h6-lg">
+          {{ records.states[0].state }}
+        </div>
       </q-card-section>
       <q-card-section>
           
