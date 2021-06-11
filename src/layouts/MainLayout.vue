@@ -46,7 +46,7 @@
             </q-item>
 
             <q-item 
-            to="/country"
+            to="/states"
             exact
             clickable v-ripple>
               <q-item-section avatar>

@@ -33,7 +33,7 @@
       </q-card-section>
       <q-card-section class="bg-grey">
           
-       <h6 class="text-center text-dark vertical-middle">
+       <h6 class="text-center text-dark ">
          You can change state below
        </h6>
         
@@ -147,7 +147,7 @@ export default {
 .custom-select select {
   display: block; /*hide original SELECT element: */
   width: 100%;
-  height: 80px;
+  height: 60px;
 }
 
 .select-selected {
