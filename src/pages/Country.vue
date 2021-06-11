@@ -46,25 +46,50 @@
       </q-inner-loading>
     </q-card>
     </div>
-
+      
    
     <div class=" absolute-bottom custom-select" style="width:100%;">
-  <select v-model="state_num">
-    <option value="0">Lagos</option>
-    <option value="1">FCT</option>
-    <option value="2">BMW</option>
-    <option value="3">Citroen</option>
-    <option value="4">Ford</option>
-    <option value="5">Honda</option>
-    <option value="6">Jaguar</option>
-    <option value="7">Land Rover</option>
-    <option value="8">Mercedes</option>
-    <option value="9">Mini</option>
-    <option value="10">Nissan</option>
-    <option value="11">Toyota</option>
-    <option value="12">Volvo</option>
-  </select>
-</div>
+      <h4 class="center">Select a state</h4>
+      <select v-model="state_num">
+        <option value="0">Lagos</option>
+        <option value="1">FCT</option>
+        <option value="2">Kaduna</option>
+        <option value="3">Plateau</option>
+        <option value="4">Rivers</option>
+        <option value="5">Oyo</option>
+        <option value="6">Edo</option>
+        <option value="7">Ogun</option>
+        <option value="8">Kano</option>
+        <option value="9">Ondo</option>
+        <option value="10">Kwara</option>
+        <option value="11">Delta</option>
+        <option value="12">Osun</option>
+        <option value="13">Enugu</option>
+        <option value="14">Nasarawa</option>
+        <option value="15">Katsina</option>
+        <option value="16">Gombe</option>
+        <option value="17">Ebonyi</option>
+        <option value="18">AkwaIbom</option>
+        <option value="19">Anambra</option>
+        <option value="20">Abia</option>
+        <option value="21">Imo</option>
+        <option value="22">Bauchi</option>
+        <option value="23">Benue</option>
+        <option value="24">Borno</option>
+        <option value="25">Adamawa</option>
+        <option value="26">Taraba</option>
+        <option value="27">Niger</option>
+        <option value="28">Bayelsa</option>
+        <option value="29">Ekiti</option>
+        <option value="30">Sokoto</option>
+        <option value="31">Jigawa</option>
+        <option value="32">Yobe</option>
+        <option value="33">Kebbi</option>
+        <option value="34">CrossRiver</option>
+        <option value="35">Zamfara</option>
+        <option value="36">Kogi</option>
+      </select>
+     </div>
    
 
   </q-page>
