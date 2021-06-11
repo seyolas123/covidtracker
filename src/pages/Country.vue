@@ -31,13 +31,11 @@
           Deaths: {{ records.states[state_num].death }}
         </div>
       </q-card-section>
-      <q-card-section>
+      <q-card-section class="bg-grey">
           
-        <q-img
-            class="absolute-right vertical-middle" 
-            style="margin-top: -10px; color:white; height: 50px; max-width: 50px"
-            src="../assets/cvd_logo.png">
-          </q-img>
+       <h6 class="text-center text-dark vertical-middle">
+         You can change state below
+       </h6>
         
       </q-card-section>
 
@@ -48,8 +46,8 @@
     </div>
       
    
-    <div class=" absolute-bottom custom-select" style="width:100%;">
-      <h4 class="center">Select a state</h4>
+    <div class="absolute-bottom custom-select" style="width:100%;">
+      
       <select v-model="state_num">
         <option value="0">Lagos</option>
         <option value="1">FCT</option>
@@ -103,9 +101,6 @@ export default {
   name: 'PageIndex',
   data() {
     return {
-       options: [
-        'Lagos', 'FCT'
-      ],
       state_num: 0,
       slide: 'style',
       loading: true,
@@ -152,7 +147,7 @@ export default {
 .custom-select select {
   display: block; /*hide original SELECT element: */
   width: 100%;
-  height: 50px;
+  height: 80px;
 }
 
 .select-selected {
