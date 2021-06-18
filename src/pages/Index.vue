@@ -130,14 +130,22 @@ import axios from 'axios'
 import { axiosInstance } from 'boot/axios'
 
 export default {
+  
+  
   name: 'PageIndex',
+  
   data() {
     return {
       cases: [],
+      timer: '',
       slide: 'style',
       loading:true,
       states: [],
     }
+  },
+  created () {
+    this.loadData()
+    this.timer = setInterval(this.loadData, 300000)
   },
   mounted () {
     this.loadData()
@@ -173,7 +181,13 @@ export default {
           icon: 'report_problem'
         })
       })
-}
+},
+  cancelAutoUpdate () {
+    clearInterval(this.timer)
+  }
+  },
+  beforeDestroy () {
+    this.cancelAutoUpdate()
   }
 }
 
