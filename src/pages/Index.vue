@@ -147,9 +147,7 @@ export default {
     this.loadData()
     this.timer = setInterval(this.loadData, 300000)
   },
-  mounted () {
-    this.loadData()
-  },
+  
   methods: {
     
     getByStates () {
