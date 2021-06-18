@@ -145,7 +145,7 @@ export default {
   },
   created () {
     this.loadData()
-    this.timer = setInterval(this.loadData, 300000)
+    this.timer = setInterval(this.loadData, 3000)
   },
   
   methods: {
