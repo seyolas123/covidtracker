@@ -143,7 +143,7 @@ export default {
       states: [],
     }
   },
-  created () {
+  mounted () {
     this.loadData()
     this.timer = setInterval(this.loadData, 3000)
   },
@@ -179,14 +179,8 @@ export default {
           icon: 'report_problem'
         })
       })
-},
-  cancelAutoUpdate () {
-    clearInterval(this.timer)
-  }
+    },
   },
-  beforeDestroy () {
-    this.cancelAutoUpdate()
-  }
 }
 
 </script>
